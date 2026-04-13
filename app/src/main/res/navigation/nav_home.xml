@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/productFragment">
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.neythuaung.product_catalog_app.product.presentation.product_list.fragments.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.neythuaung.product_catalog_app.product.presentation.favourite_products.fragments.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.neythuaung.product_catalog_app.product.presentation.product_detail.fragment.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.neythuaung.product_catalog_app.profile.presentation.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

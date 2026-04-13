@@ -1,0 +1,93 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt)
+}
+
+android {
+    namespace 'com.neythuaung.product_catalog_app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.neythuaung.product_catalog_app"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    // Navigation Components
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.fragment.ktx)
+
+    implementation(libs.swiperefreshlayout)
+
+    // Coroutine Lifecycle Scopes and Architectural Components
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.livedata.ktx)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    //Dagger - Hilt
+    // add plugin for dagger hilt in project level and app level
+    implementation(libs.daggerHiltAndroid)
+    implementation libs.hiltNavigationCompose
+    implementation libs.hilt.navigation.fragment
+    kapt(libs.daggerHiltCompiler)
+
+    //Circle Image View
+    implementation libs.circle.image
+
+    // Networking with Retrofit and OkHttp
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging.interceptor)
+
+    // Glide for image loading
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
+    //Lottie Animation
+    implementation libs.lottie
+
+    // Room (Database)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
+
+}

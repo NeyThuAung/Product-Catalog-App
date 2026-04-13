@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Product-Catalog-App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="get_started_now">Get Started Now</string>
+    <string name="log_in_to_continue">Log in to continue browsing products.</string>
+    <string name="email">Email</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log In</string>
+    <string name="continue_register">Continue</string>
+    <string name="or">Or</string>
+    <string name="set_up">Set Up Login Credentials</string>
+    <string name="finalize_your_account">Finalize your account by setting up a strong and secure password.</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="_1_s">$%1$s</string>
+    <string name="_1_s_reviews">(%1$s reviews)</string>
+    <string name="sure_to_log_out">Log Out?</string>
+    <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out? You can always sign back in later.</string>
+    <string name="logout">Logout</string>
+</resources>
